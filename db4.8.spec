@@ -63,10 +63,9 @@ Summary(pl.UTF-8):	Pliki nagłówkowe do biblioteki Berkeley Database
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Provides:	db-devel = %{version}-%{release}
+Obsoletes:	db-devel
 Obsoletes:	db3-devel
 Obsoletes:	db4-devel
-Obsoletes:	db4.5-devel
-Obsoletes:	db4.6-devel
 
 %description devel
 The Berkeley Database (Berkeley DB) is a programmatic toolkit that
@@ -96,10 +95,9 @@ Summary(pl.UTF-8):	Statyczne biblioteki Berkeley Database
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 Provides:	db-static = %{version}-%{release}
+Obsoletes:	db-static
 Obsoletes:	db3-static
 Obsoletes:	db4-static
-Obsoletes:	db4.5-static
-Obsoletes:	db4.6-static
 
 %description static
 The Berkeley Database (Berkeley DB) is a programmatic toolkit that
@@ -143,6 +141,7 @@ Group:		Development/Libraries
 Requires:	%{name}-cxx = %{epoch}:%{version}-%{release}
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 Provides:	db-cxx-devel = %{version}-%{release}
+Obsoletes:	db-cxx-devel
 Conflicts:	db-devel < 4.1.25-3
 
 %description cxx-devel
@@ -157,6 +156,7 @@ Summary(pl.UTF-8):	Statyczna wersja biblioteki db-cxx
 Group:		Development/Libraries
 Requires:	%{name}-cxx-devel = %{epoch}:%{version}-%{release}
 Provides:	db-cxx-static = %{version}-%{release}
+Obsoletes:	db-cxx-static
 Conflicts:	db-static < 4.2.50-1
 
 %description cxx-static
@@ -171,6 +171,8 @@ Summary(pl.UTF-8):	Biblioteka baz danych Berkeley dla Javy
 Group:		Libraries
 Requires:	jpackage-utils
 Provides:	db-java = %{version}-%{release}
+# db.jar conflicts
+Obsoletes:	db-java
 
 %description java
 Berkeley database library for Java.
@@ -184,6 +186,7 @@ Summary(pl.UTF-8):	Pliki programistyczne biblioteki db-java
 Group:		Development/Languages/Java
 Requires:	%{name}-java = %{epoch}:%{version}-%{release}
 Provides:	db-java-devel = %{version}-%{release}
+Obsoletes:	db-java-devel
 Conflicts:	db-devel < 4.1.25-3
 
 %description java-devel
@@ -212,6 +215,7 @@ Summary(pl.UTF-8):	Pliki programistyczne biblioteki db-tcl
 Group:		Development/Languages/Tcl
 Requires:	%{name}-tcl = %{epoch}:%{version}-%{release}
 Provides:	db-tcl-devel = %{version}-%{release}
+Obsoletes:	db-tcl-devel
 Conflicts:	db-devel < 4.1.25-3
 
 %description tcl-devel
@@ -226,6 +230,7 @@ Summary(pl.UTF-8):	Narzędzia do obsługi baz Berkeley DB z linii poleceń
 Group:		Applications/Databases
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Provides:	db-utils = %{version}-%{release}
+Obsoletes:	db-utils
 Obsoletes:	db3-utils
 Obsoletes:	db4-utils
 
