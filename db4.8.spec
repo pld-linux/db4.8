@@ -13,8 +13,8 @@
 %include	/usr/lib/rpm/macros.java
 
 %define		libver		4.8
-%define		ver			%{libver}.24
-%define		patchlevel	1
+%define		ver			%{libver}.26
+%define		patchlevel	0
 Summary:	Berkeley DB database library for C
 Summary(pl.UTF-8):	Biblioteka C do obsługi baz Berkeley DB
 Name:		db4.8
@@ -24,7 +24,7 @@ Epoch:		0
 License:	GPL-like (see LICENSE)
 Group:		Libraries
 Source0:	http://download.oracle.com/berkeley-db/db-%{ver}.tar.gz
-# Source0-md5:	147afdecf438ff99ade105a5272db158
+# Source0-md5:	3476bac9ec0f3c40729c8a404151d5e3
 # %%patchset_source -f http://www.oracle.com/technology/products/berkeley-db/db/update/%{ver}/patch.%{ver}.%g 1 %{patchlevel}
 URL:		http://www.oracle.com/technology/products/berkeley-db/index.html
 BuildRequires:	automake
