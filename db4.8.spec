@@ -28,7 +28,6 @@ Source0:	http://download.oracle.com/berkeley-db/db-%{ver}.tar.gz
 # %%patchset_source -f http://www.oracle.com/technology/products/berkeley-db/db/update/%{ver}/patch.%{ver}.%g 1 %{patchlevel}
 URL:		http://www.oracle.com/technology/products/berkeley-db/index.html
 BuildRequires:	automake
-BuildRequires:	ed
 %if %{with java}
 %{!?with_java_sun:BuildRequires:	java-gcj-compat-devel}
 %{?with_java_sun:BuildRequires:	java-sun}
@@ -40,8 +39,8 @@ BuildRequires:	rpmbuild(macros) >= 1.426
 BuildRequires:	sed >= 4.0
 %{?with_tcl:BuildRequires:	tcl-devel >= 8.4.0}
 Requires:	uname(release) >= 2.6.0
-Provides:	db = %{version}-%{release}
 Provides:	db = %{libver}
+Provides:	db = %{version}-%{release}
 Obsoletes:	db4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
