@@ -375,7 +375,7 @@ ln -sf libdb_cxx-%{libver}.so libdb_cxx.so
 ln -sf libdb_cxx-%{libver}.la libdb_cxx.la
 %if %{with java}
 ln -sf libdb_java-%{libver}.la libdb_java.la
-ln -sf db-%{libver}.jar $RPM_BUILD_ROOT%{_libdir}/db.jar
+ln -sf db-%{libver}.jar $RPM_BUILD_ROOT%{_javadir}/db.jar
 %endif
 %if %{with tcl}
 ln -sf libdb_tcl-%{libver}.so libdb_tcl.so
