@@ -298,11 +298,11 @@ LDFLAGS="%{rpmcflags} %{rpmldflags}"
 export CC CXX CFLAGS CXXFLAGS LDFLAGS
 
 ../dist/%configure \
-	--enable-compat185 \
 	--disable-shared \
 	--enable-static \
-	--enable-posixmutexes \
-	--enable-cxx
+	--enable-compat185 \
+	--enable-cxx \
+	--enable-posixmutexes
 
 # (temporarily?) disabled because of compilation errors:
 #	--enable-dump185 \
@@ -316,14 +316,13 @@ cd build_unix
 ../dist/%configure \
 	--prefix=%{_prefix} \
 	--libdir=%{_libdir} \
-	--enable-compat185 \
-	--enable-posixmutexes \
-	--enable-cxx \
-	%{?with_tcl:--enable-tcl} \
-	%{?with_tcl:--with-tcl=/usr/lib} \
-	%{?with_java:--enable-java} \
+	--enable-shared \
 	--disable-static \
-	--enable-shared
+	--enable-compat185 \
+	--enable-cxx \
+	--enable-posixmutexes \
+	%{?with_java:--enable-java} \
+	%{?with_tcl:--enable-tcl --with-tcl=/usr/lib}
 
 %{__make} library_build \
 	TCFLAGS='-I$(builddir) -I%{_includedir}' \
