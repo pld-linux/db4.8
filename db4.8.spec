@@ -5,7 +5,6 @@
 %bcond_without	static_libs	# don't build static libraries
 %bcond_with	default_db	# use this db as default system db
 
-%include	/usr/lib/rpm/macros.java
 
 %define		libver		4.8
 %define		ver		%{libver}.30
